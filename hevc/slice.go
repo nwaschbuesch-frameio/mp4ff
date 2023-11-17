@@ -361,6 +361,7 @@ func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PP
 		}
 	}
 
+	/* Comment over restrictive check - main goal of parsing is slice header is to get size.
 	if !r.ReadFlag() {
 		return sh, errors.New("alignment bit is not equal to one")
 	}
@@ -369,10 +370,7 @@ func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PP
 			return sh, errors.New("bit after alignment is not equal to zero")
 		}
 	}
-
-	if r.AccError() != nil {
-		return nil, r.AccError()
-	}
+	*/
 
 	// compute the size in bytes. last byte is always aligned
 	sh.Size = uint32(r.NrBytesRead())
