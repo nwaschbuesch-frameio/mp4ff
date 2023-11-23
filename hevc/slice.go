@@ -371,6 +371,10 @@ func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PP
 		}
 	}
 
+	if r.AccError() != nil {
+		return nil, r.AccError()
+	}
+
 	// compute the size in bytes. last byte is always aligned
 	sh.Size = uint32(r.NrBytesRead())
 
