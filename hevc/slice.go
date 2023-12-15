@@ -110,6 +110,9 @@ type WeightingFactors struct {
 func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PPS) (*SliceHeader, error) {
 	sh := &SliceHeader{}
 
+	sh.CollocatedFromL0Flag = true
+	sh.PicOutputFlag = true
+
 	buf := bytes.NewBuffer(nalu)
 	r := bits.NewAccErrEBSPReader(buf)
 
@@ -363,11 +366,11 @@ func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PP
 
 	// Comment over restrictive check - main goal of parsing is slice header is to get size.
 	if !r.ReadFlag() {
-		//return sh, errors.New("alignment bit is not equal to one")
+		return sh, errors.New("alignment bit is not equal to one")
 	}
 	for r.NrBitsReadInCurrentByte() < 8 {
 		if r.ReadFlag() {
-			//return sh, errors.New("bit after alignment is not equal to zero")
+			return sh, errors.New("bit after alignment is not equal to zero")
 		}
 	}
 
