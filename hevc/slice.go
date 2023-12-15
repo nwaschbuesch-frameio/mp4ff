@@ -2,7 +2,7 @@ package hevc
 
 import (
 	"bytes"
-	//"errors"
+	"errors"
 	"fmt"
 	"github.com/Eyevinn/mp4ff/bits"
 )
