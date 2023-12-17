@@ -180,6 +180,9 @@ func ParsePPSNALUnit(data []byte, spsMap map[uint32]*SPS) (*PPS, error) {
 
 	pps := &PPS{}
 
+	pps.UniformSpacingFlag = true
+	pps.LoopFilterAcrossTilesEnabledFlag = true
+	
 	rd := bytes.NewReader(data)
 	r := bits.NewAccErrEBSPReader(rd)
 	// Note! First two bytes are NALU Header
