@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eyevinn/mp4ff/mp4"
+	"github.com/nwaschbuesch-frameio/mp4ff/mp4"
 )
 
 // Segmenter - segment the progressive inFIle

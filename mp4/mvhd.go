@@ -4,7 +4,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // MvhdBox - Movie Header Box (mvhd - mandatory)

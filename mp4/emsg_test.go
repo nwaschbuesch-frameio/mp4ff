@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-test/deep"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 func TestEmsg(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/Eyevinn/mp4ff/bits"
-	"github.com/Eyevinn/mp4ff/mp4"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/mp4"
 )
 
 func main() {

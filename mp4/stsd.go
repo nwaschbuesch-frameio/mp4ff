@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // StsdBox - Sample Description Box (stsd - manatory)
@@ -109,7 +109,7 @@ func DecodeStsd(hdr BoxHeader, startPos uint64, r io.Reader) (Box, error) {
 		return nil, err
 	}
 	if len(children) != int(sampleCount) {
-		return nil, fmt.Errorf("stsd sample count  mismatch")
+		//return nil, fmt.Errorf("stsd sample count  mismatch")
 	}
 	stsd := &StsdBox{
 		Version:     byte(versionAndFlags >> 24),
@@ -120,7 +120,7 @@ func DecodeStsd(hdr BoxHeader, startPos uint64, r io.Reader) (Box, error) {
 		stsd.AddChild(box)
 	}
 	if stsd.SampleCount != sampleCount {
-		return nil, fmt.Errorf("stsd sample count mismatch")
+		//return nil, fmt.Errorf("stsd sample count mismatch")
 	}
 	return stsd, nil
 }
@@ -135,7 +135,7 @@ func DecodeStsdSR(hdr BoxHeader, startPos uint64, sr bits.SliceReader) (Box, err
 		return nil, err
 	}
 	if len(children) != int(sampleCount) {
-		return nil, fmt.Errorf("stsd sample count  mismatch")
+		//return nil, fmt.Errorf("stsd sample count  mismatch")
 	}
 	stsd := StsdBox{
 		Version:     byte(versionAndFlags >> 24),
@@ -147,7 +147,7 @@ func DecodeStsdSR(hdr BoxHeader, startPos uint64, sr bits.SliceReader) (Box, err
 		stsd.AddChild(box)
 	}
 	if stsd.SampleCount != sampleCount {
-		return nil, fmt.Errorf("stsd sample count mismatch")
+		//	return nil, fmt.Errorf("stsd sample count mismatch")
 	}
 	return &stsd, nil
 }

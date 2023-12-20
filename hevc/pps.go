@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 	"io"
 )
 
@@ -182,7 +182,7 @@ func ParsePPSNALUnit(data []byte, spsMap map[uint32]*SPS) (*PPS, error) {
 
 	pps.UniformSpacingFlag = true
 	pps.LoopFilterAcrossTilesEnabledFlag = true
-	
+
 	rd := bytes.NewReader(data)
 	r := bits.NewAccErrEBSPReader(rd)
 	// Note! First two bytes are NALU Header

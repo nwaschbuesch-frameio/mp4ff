@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // File - an MPEG-4 file asset

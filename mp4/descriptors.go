@@ -3,7 +3,7 @@ package mp4
 import (
 	"fmt"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 /* Elementary Stream Descriptors are defined in ISO/IEC 14496-1.
