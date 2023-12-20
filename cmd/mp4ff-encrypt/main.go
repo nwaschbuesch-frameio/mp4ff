@@ -11,7 +11,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nwaschbuesch-frameio/mp4ff/mp4"
+	"github.com/Eyevinn/mp4ff/mp4"
 )
 
 var usg = `Usage of %s:
@@ -38,13 +38,10 @@ func parseOptions() {
 	flag.StringVar(&opts.scheme, "scheme", "cenc", "cenc or cbcs. Required if initFilePath empty")
 	flag.StringVar(&opts.psshFile, "pssh", "", "file with one or more pssh box(es) in binary format. Will be added at end of moov box")
 	flag.BoolVar(&opts.version, "version", false, "Get mp4ff version")
-	flag.Parse()
 
 	flag.Usage = func() {
 		parts := strings.Split(os.Args[0], "/")
-		fmt.Printf("@@@ mp4ff-encrypt parts %s\n", parts)
 		name := parts[len(parts)-1]
-				fmt.Printf("@@@ mp4ff-encrypt parts name %s\n", name)
 		fmt.Fprintf(os.Stderr, usg, name, name)
 		fmt.Fprintf(os.Stderr, "\n%s [options] infile outfile\n\noptions:\n", name)
 		flag.PrintDefaults()
@@ -52,33 +49,19 @@ func parseOptions() {
 }
 
 func main() {
-	/*
 	parseOptions()
-	fmt.Printf("@@@@@ mp4ff-encrypt flag len %d\n", len(flag.Args()))
 
 	if opts.version {
 		fmt.Printf("mp4ff-encrypt %s\n", mp4.GetVersion())
-		fmt.Printf("@@@ mp4ff-encrypt %s\n", mp4.GetVersion())
 		os.Exit(0)
 	}
 
 	if len(flag.Args()) != 2 {
 		flag.Usage()
-
-
-
-				fmt.Printf("@@@ mp4ff-encrypt flag len %d\n", len(flag.Args()))
-		//os.Exit(1)
+		os.Exit(1)
 	}
-*/
-	fmt.Printf("@@@ mp4ff-encrypt flag arg0: %s\n", flag.Arg(0))
-
-
-	var inFilePath = "/Users/nwaschbuesch/MyCode/MEDIA-795/exodus_vid_decrypt_align_vid_seg0-21.mp4" //flag.Arg(0)
-	var outFilePath = "/Users/nwaschbuesch/MyCode/MEDIA-795/exodus_vid_reencrypted_align_vid_seg0-21.mp4" //flag.Arg(1)
-	opts.hexKey = "3689132f28089ace049853d1b51a6cca"  
-	opts.ivHex = "7068f5e7629237e1ae5724e2d599ab17"
-	opts.initFile = "/Users/nwaschbuesch/MyJIRAs/MEDIA-795/exodus_vid_init_seg0.m4s"
+	var inFilePath = flag.Arg(0)
+	var outFilePath = flag.Arg(1)
 
 	if opts.hexKey == "" || opts.ivHex == "" {
 		fmt.Fprintf(os.Stderr, "need both key and iv\n")
