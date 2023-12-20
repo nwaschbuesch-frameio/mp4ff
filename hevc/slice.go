@@ -4,7 +4,7 @@ import (
 	"bytes"
 	//"errors"
 	"fmt"
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // This parser based on Rec. ITU-T H.265 v5 (02/2018) and ISO/IEC 23008-2 Ed. 5
@@ -109,6 +109,9 @@ type WeightingFactors struct {
 
 func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PPS) (*SliceHeader, error) {
 	sh := &SliceHeader{}
+
+	sh.CollocatedFromL0Flag = true
+	sh.PicOutputFlag = true
 
 	buf := bytes.NewBuffer(nalu)
 	r := bits.NewAccErrEBSPReader(buf)
@@ -369,6 +372,10 @@ func ParseSliceHeader(nalu []byte, spsMap map[uint32]*SPS, ppsMap map[uint32]*PP
 		if r.ReadFlag() {
 			//return sh, errors.New("bit after alignment is not equal to zero")
 		}
+	}
+
+	if r.AccError() != nil {
+		return nil, r.AccError()
 	}
 
 	// compute the size in bytes. last byte is always aligned

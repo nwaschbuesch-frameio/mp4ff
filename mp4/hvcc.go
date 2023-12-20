@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
-	"github.com/Eyevinn/mp4ff/hevc"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/hevc"
 )
 
 // HvcCBox - HEVCConfigurationBox (ISO/IEC 14496-15 8.4.1.1.2)

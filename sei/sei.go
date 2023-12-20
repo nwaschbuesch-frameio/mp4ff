@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 var ErrRbspTrailingBitsMissing = errors.New("rbsp_trailing_bits byte 0x80 is missing")

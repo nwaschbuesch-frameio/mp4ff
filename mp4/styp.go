@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // StypBox - Segment Type Box (styp)

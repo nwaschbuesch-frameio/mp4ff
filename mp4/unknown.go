@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // UnknownBox - box that we don't know how to parse

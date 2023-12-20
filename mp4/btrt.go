@@ -3,7 +3,7 @@ package mp4
 import (
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // BtrtBox - BitRateBox - ISO/IEC 14496-12 Section 8.5.2.2

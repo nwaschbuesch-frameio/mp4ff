@@ -14,7 +14,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Eyevinn/mp4ff/mp4"
+	"github.com/nwaschbuesch-frameio/mp4ff/mp4"
 )
 
 var usg = `Usage of %s:

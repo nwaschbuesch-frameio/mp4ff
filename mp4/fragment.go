@@ -5,7 +5,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // Fragment - MP4 Fragment ([prft] + moof + mdat)

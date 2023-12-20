@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Eyevinn/mp4ff/sei"
+	"github.com/nwaschbuesch-frameio/mp4ff/sei"
 	"github.com/go-test/deep"
 )
 

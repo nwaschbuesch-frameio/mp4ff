@@ -3,7 +3,7 @@ package mp4
 import (
 	"io"
 
-	"github.com/Eyevinn/mp4ff/bits"
+	"github.com/nwaschbuesch-frameio/mp4ff/bits"
 )
 
 // ClapBox - Clean Aperture Box, ISO/IEC 14496-12 2020 Sec. 12.1.4
