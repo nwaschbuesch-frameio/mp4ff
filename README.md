@@ -1,10 +1,10 @@
 ![Logo](images/logo.png)
 
-![Test](https://github.com/nwaschbuesch-frameio/mp4ff/workflows/Go/badge.svg)
-![golangci-lint](https://github.com/nwaschbuesch-frameio/mp4ff/workflows/golangci-lint/badge.svg?branch=master)
-[![GoDoc](https://godoc.org/github.com/nwaschbuesch-frameio/mp4ff?status.svg)](http://godoc.org/github.com/nwaschbuesch-frameio/mp4ff)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nwaschbuesch-frameio/mp4ff)](https://goreportcard.com/report/github.com/nwaschbuesch-frameio/mp4ff)
-[![license](https://img.shields.io/github/license/nwaschbuesch-frameio/mp4ff.svg)](https://github.com/nwaschbuesch-frameio/mp4ff/blob/master/LICENSE)
+![Test](https://github.com/Eyevinn/mp4ff/workflows/Go/badge.svg)
+![golangci-lint](https://github.com/Eyevinn/mp4ff/workflows/golangci-lint/badge.svg?branch=master)
+[![GoDoc](https://godoc.org/github.com/Eyevinn/mp4ff?status.svg)](http://godoc.org/github.com/Eyevinn/mp4ff)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Eyevinn/mp4ff)](https://goreportcard.com/report/github.com/Eyevinn/mp4ff)
+[![license](https://img.shields.io/github/license/Eyevinn/mp4ff.svg)](https://github.com/Eyevinn/mp4ff/blob/master/LICENSE)
 
 Package mp4ff implements MP4 media file parsing and writing for AVC and HEVC video, AAC and AC-3 audio,  and stpp and wvtt subtitles.
 It is focused on fragmented files as used for streaming in DASH, MSS and HLS fMP4, but can also decode and encode all boxes needed for
@@ -28,7 +28,7 @@ Some useful command line tools are available in `cmd`.
 
 You can install these tools by going to their respective directory and run `go install .` or directly from the repo with
 
-    go install github.com/nwaschbuesch-frameio/mp4ff/cmd/mp4ff-info@latest
+    go install github.com/Eyevinn/mp4ff/cmd/mp4ff-info@latest
 
 ## Example code
 
@@ -345,16 +345,16 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## Support
 
-Join our [community on Slack](http://slack.streamingtech.se) where you can post any questions regarding any of our open source projects. nwaschbuesch-frameio's consulting business can also offer you:
+Join our [community on Slack](http://slack.streamingtech.se) where you can post any questions regarding any of our open source projects. Eyevinn's consulting business can also offer you:
 
 * Further development of this component
 * Customization and integration of this component into your platform
 * Support and maintenance agreement
 
-Contact [sales@nwaschbuesch-frameio.se](mailto:sales@nwaschbuesch-frameio.se) if you are interested.
+Contact [sales@eyevinn.se](mailto:sales@eyevinn.se) if you are interested.
 
-## About nwaschbuesch-frameio Technology
+## About Eyevinn Technology
 
-[nwaschbuesch-frameio Technology](https://www.nwaschbuesch-frameiotechnology.se) is an independent consultant firm specialized in video and streaming. Independent in a way that we are not commercially tied to any platform or technology vendor. As our way to innovate and push the industry forward we develop proof-of-concepts and tools. The things we learn and the code we write we share with the industry in [blogs](https://dev.to/video) and by open sourcing the code we have written.
+[Eyevinn Technology](https://www.eyevinntechnology.se) is an independent consultant firm specialized in video and streaming. Independent in a way that we are not commercially tied to any platform or technology vendor. As our way to innovate and push the industry forward we develop proof-of-concepts and tools. The things we learn and the code we write we share with the industry in [blogs](https://dev.to/video) and by open sourcing the code we have written.
 
-Want to know more about nwaschbuesch-frameio and how it is to work here. Contact us at work@nwaschbuesch-frameio.se!
+Want to know more about Eyevinn and how it is to work here. Contact us at work@eyevinn.se!
